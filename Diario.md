@@ -1,46 +1,18 @@
-# Bookmark
+### Reunião 1
+
+## Data: 04/03/2021
+
+Foram abordado a escolha do projeto . Quais linguagem iremos utilizar na construção. Criação do repositório do github.
+Criação dos requisitos do sistema e modelo relacional.
+
+Participantes: Ana, Gabriel Rocha, Marriele , Wiliam
 
 
+### Reunião 2
 
-**Reunião semanal:**
+## Data: 11/03/2021
 
+Foram criadas as histórias do usuário do sistema (Bookmark)
 
-|**DATA**|**ASSUNTO:**|**PARTICIPANTES** |
-| :-: | :-: | :-: |
-|04/03/2021|<p>Foram abordado a escolha do projeto</p><p>Quais linguagem iremos utilizar na construção. </p><p>Criação do repositório do github.</p><p>Criação dos requisitos do sistema e modelo relacional. </p>|Ana, Gabriel Rocha, Marriele , Wiliam|
-|11/03/2021|Foram criadas  as  histórias do usuário do sistema (Bookmark).|Ana, Gabriel Rocha, Marriele , Wiliam|
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-
-
-
-
-
-
-
-
-
-**Reunião Diária:**
-
-
-|**DATA**|**ASSUNTO:**|**PARTICIPANTES** |
-| :-: | :-: | :-: |
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
+Participantes: GAna, Gabriel Rocha, Marriele , Wiliam
 
