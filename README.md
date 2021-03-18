@@ -33,6 +33,16 @@ O Bookmark é um aplicativo semelhante a uma estante virtual, onde o usuário ad
 * Avaliar livros
 * Descobrir mais sobre livros, gêneros e autores
 
+## Protótipo
+Confira o protótipo do aplicativo no <a href="https://www.figma.com/proto/pLd950Q5pwy6glaK50Z9CQ/Bookmark-app-(PT)---Fixed?node-id=0%3A453&scaling=min-zoom" title="Protótipo do Bookmark">Figma</a>: conheça melhor as funcionalidades e seu design.
+
+<h1 align="center">
+  <br>
+ 	<img src="https://i.imgur.com/t19SIRe.png"></a>
+  <br>
+</h1>
+
+
 ## Como executar
 
 ### Requisitos
