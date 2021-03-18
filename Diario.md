@@ -19,3 +19,12 @@ Foram criadas as histórias do usuário do sistema (Bookmark)
 
 Participantes: GAna, Gabriel Rocha, Marriele , Wiliam
 
+
+
+### Reunião 3
+
+## Data: 17/03/2021
+
+Na reunião foram visto as histórias de usuário, colocado as estimativas do planing poker 
+
+Participantes: GAna, Gabriel Rocha, Marriele , Wiliam
