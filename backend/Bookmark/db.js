@@ -8,3 +8,5 @@ async function connect(){
     global.connection = connection;
     return connection;
 }
+
+module.exports = {connect}
