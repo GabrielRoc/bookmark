@@ -8,3 +8,11 @@ async function connect(){
     global.connection = connection;
     return connection;
 }
+
+async function selectLivros(){
+    const conn = await connect();
+    const [rows] = await conn.query('SELECT * FROM livros;');
+    return rows;
+}
+
+module.exports = {selectLivros}
