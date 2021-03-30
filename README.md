@@ -13,11 +13,11 @@
           </a>
   <a href="https://nodejs.org/">
     <img src="https://img.shields.io/badge/Node.js-14.16.0-43895D?style=for-the-badge&logo=Node.js"
-         alt="Dart">
+         alt="Node.js">
           </a>
   <a href="https://mysql.com/">
-    <img src="https://img.shields.io/badge/MySQL-8.0.0-6087DB?style=for-the-badge&logo=MySQL"
-         alt="Firebase">
+    <img src="https://img.shields.io/badge/MySQL-8.0.0-F29111?style=for-the-badge&logo=MySQL"
+         alt="MySQL">
           </a>
     
 </p>
