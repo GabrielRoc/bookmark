@@ -1,39 +1,31 @@
-const Livro = require('../models/livro');
 const database = require('../db');
+const Livro = require('../models/livro')
 
 // Lista todos os livros.
 exports.index = function(req, res) {
-
-    // async function selectLivros(){
-    //     const conn = await database.connect();
-    //     const [rows] = await conn.query('SELECT * FROM livros;');
-    //     return rows;
-    // }
-
-    // res.send(selectLivros());
-
-    (async () => {
-        console.log('Começou!');
-    
-        console.log('SELECT * FROM livros');
-        const livros = await database.selectLivros();
-        res.send(livros);
-    })();
+    Livro.getAll((err, data) => {
+        if (err)
+            res.status(500).send({
+            message:
+                err.message || "Some error occurred while retrieving customers."
+            });
+        else res.send(data);
+    });
 };
 
 // Busca livro expecifico.
 exports.buscarLivro = function(req, res) {
-    res.send('NOT IMPLEMENTED: buscar livro');
+    Livro.findById(req.params.id, (err, data) => {
+        res.send(data);
+    });
 };
 
 // Adiciona um novo livro.
 exports.adicionarLivro = function(req, res) {
-    
-    console.log('oi');
-
-    // res.send(req)
-    // const resultadoCreate = await Livro.create(req)
-    // res.send('NOT IMPLEMENTED: adicionar livro');
+    const livro = new Livro(req.body.livro);
+    Livro.create(livro, (err, data) => {
+        res.send(data);
+    });
 };
 
 // Editar um livro.
@@ -45,3 +37,15 @@ exports.editarLivro = function(req, res) {
 exports.removerLivro = function(req, res) {
     res.send('NOT IMPLEMENTED: remover livro');
 };
+
+/**
+ * ADICIONA GENERO PARA TESTE
+ */
+// (async () => {
+//     // const dados_livro = req.body.livro;
+//     const conn = await database.connect();
+//     const sql = 'INSERT INTO Genero(gen_nome) VALUES (?);';
+//     const values = ['Fantasia'];
+//     const genero = await conn.query(sql, values);
+//     res.send(genero);
+// })();

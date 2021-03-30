@@ -9,10 +9,4 @@ async function connect(){
     return connection;
 }
 
-async function selectLivros(){
-    const conn = await connect();
-    const [rows] = await conn.query('SELECT * FROM livros;');
-    return rows;
-}
-
-module.exports = {selectLivros}
+module.exports = {connect}
