@@ -90,5 +90,25 @@ Foram escolhidas as seguintes histórias, consideradas básicas para o funcionam
 - **Ana Frozza:** Criou CRUD dos livros e auxiliou outros participantes 
 - **Gabriel Rocha:** Criou CRUD da estante e auxiliou outros participantes
 - **Marrielly Martines:** Criou CRUD da leitura e continuou CRUD dos livros e da estante
-- **Wiliam Consentino:** 
+- **Wiliam Consentino:** Tentou finalizar o CRUD dos livros, porém obteve problemas com a interação com o banco de dados
+
+
+
+## Reunião 6
+
+### Data: 06/04/2021
+
+
+#### Resumo
+Foi discutido sobre o andamento do projeto:
+- debatemos as dificuldades obtidas com a linguagem e a curva de aprendizado necessária para melhor desempenho no desenvolvimento
+- debatemos sobre as estimativas das issues, algumas subestimadas
+- definimos as próximas tarefas a serem realizadas
+- iniciamos planejamento para desenvolvimento do front-end
+
+
+#### Participantes
+- **Ana Frozza:** Responsável por criar método para retornar o capitulo atual e capítulos finalizados
+- **Gabriel Rocha e Marrielly Martines:** Responsáveis por criar método para retornar páginas lidas do capítulo atual
+- **Wiliam Consentino:** Responsável por criar método que realiza histórico de leitura
 
