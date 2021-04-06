@@ -75,3 +75,20 @@ Foram escolhidas as seguintes histórias, consideradas básicas para o funcionam
 #### Alterações
 - **Gabriel Rocha:** Refez a base do projeto para melhor funcionalidade
 - **Marrielly Martines:** Refez o diário para melhor organização
+
+
+
+## Reunião 5
+
+### Data: 01/04/2021
+#### Status: Cancelada
+
+
+### Data: 05/03/2021
+
+#### Alterações
+- **Ana Frozza:** Criou CRUD dos livros e auxiliou outros participantes 
+- **Gabriel Rocha:** Criou CRUD da estante e auxiliou outros participantes
+- **Marrielly Martines:** Criou CRUD da leitura e continuou CRUD dos livros e da estante
+- **Wiliam Consentino:** 
+
