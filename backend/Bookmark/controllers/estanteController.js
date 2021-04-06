@@ -37,15 +37,3 @@ exports.editarLivro = function(req, res) {
 exports.removerLivro = function(req, res) {
     res.send('NOT IMPLEMENTED: remover livro');
 };
-
-/**
- * ADICIONA GENERO PARA TESTE
- */
-// (async () => {
-//     // const dados_livro = req.body.livro;
-//     const conn = await database.connect();
-//     const sql = 'INSERT INTO Genero(gen_nome) VALUES (?);';
-//     const values = ['Fantasia'];
-//     const genero = await conn.query(sql, values);
-//     res.send(genero);
-// })();

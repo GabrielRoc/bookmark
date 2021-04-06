@@ -9,6 +9,12 @@ const Leitura = function(leitura) {
 
 Leitura.create = async (newLeitura, result) => {
     const sql = await database.connect();
-    const livro = sql.query("INSERT INTO Leitura SET ?", newLeitura)
-    result(null, newLeitura);
+    const leitura = sql.query("INSERT INTO Leitura SET ?", newLeitura)
+    result(null, leitura);
+};
+
+Leitura.getByEstante = async (estanteId, result) => {
+    const sql = await database.connect();
+    const [leituras] = await sql.query(`SELECT * FROM Leitura WHERE estante_id = ${estanteId}`);
+    result(null, leituras);
 };
