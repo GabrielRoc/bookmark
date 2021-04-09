@@ -18,3 +18,9 @@ Leitura.getByEstante = async (estanteId, result) => {
     const [leituras] = await sql.query(`SELECT * FROM Leitura WHERE estante_id = ${estanteId}`);
     result(null, leituras);
 };
+
+Leitura.getLastByEstante = async (estanteId, result) => {
+    const sql = await database.connect();
+    const [leituras] = await sql.query(`SELECT * FROM Leitura WHERE estante_id = ${estanteId} AND MAX(leitura_data)`);
+    result(null, leituras);
+};

@@ -2,6 +2,7 @@ const database = require('../db');
 
 // constructor
 const Estante = function(estante) {
+    this.id = estante.id;
     this.usuario_id = estante.usuario_id;
     this.livro_id = estante.livro_id;
     this.est_flag = estante.est_flag;

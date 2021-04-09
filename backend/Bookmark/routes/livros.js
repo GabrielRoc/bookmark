@@ -13,3 +13,4 @@ router.put('/editar/:id', livro_controller.editarLivro); // Edita um livro
 router.delete('/remover/:id', livro_controller.removerLivro); // DELET Remove um livro
 
 module.exports = router;
+
