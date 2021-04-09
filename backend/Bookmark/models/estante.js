@@ -9,9 +9,9 @@ const Estante = function(estante) {
     this.est_pag_marcada = estante.est_pag_marcada;
 };
 
-Estante.create = async (newLivro, result) => {
+Estante.create = async (newEstante, result) => {
     const sql = await database.connect();
-    const livro = sql.query("INSERT INTO Estante SET ?", newLivro)
+    const livro = sql.query("INSERT INTO Estante SET ?", newEstante)
     console.log("Livro criado");
     result(null, newEstante);
 };
