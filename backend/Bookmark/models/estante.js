@@ -11,12 +11,7 @@ const Estante = function(estante) {
 
 Estante.create = async (newEstante, result) => {
     const sql = await database.connect();
-<<<<<<< HEAD
-    const livro = sql.query("INSERT INTO Estante SET ?", newEstante)
-=======
     const estante = sql.query("INSERT INTO Estante SET ?", newLivro)
->>>>>>> 8f1fa2bd1e33c65a1157da9badd70f1174a2aa8e
-    console.log("Livro criado");
     result(null, estante);
 };
 

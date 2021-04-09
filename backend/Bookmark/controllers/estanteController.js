@@ -13,27 +13,8 @@ exports.index = function(req, res) {
     });
 };
 
-// Busca livro expecifico.
-exports.buscarLivro = function(req, res) {
-    Livro.findById(req.params.id, (err, data) => {
-        res.send(data);
-    });
-};
+// Busca o capitulo atual
+exports.buscarCapituloAtual = function(req, res) {
 
-// Adiciona um novo livro.
-exports.adicionarLivro = function(req, res) {
-    const livro = new Livro(req.body.livro);
-    Livro.create(livro, (err, data) => {
-        res.send(data);
-    });
-};
-
-// Editar um livro.
-exports.editarLivro = function(req, res) {
-    res.send('NOT IMPLEMENTED: editar livro');
-};
-
-// Remover um livro.
-exports.removerLivro = function(req, res) {
-    res.send('NOT IMPLEMENTED: remover livro');
+    res.send('NOT IMPLEMENTED: buscar capitulo atual');
 };
