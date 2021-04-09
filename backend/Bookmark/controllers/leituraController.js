@@ -20,3 +20,10 @@ exports.adicionarLeitura = function(req, res) {
         res.send(data);
     });
 };
+
+// Consulta todas as leituras de uma estante
+exports.consultarLeituras = function(req, res) {
+    Leitura.getByEstante(req.params.estante, (err, data) => {
+        res.send(data);
+    });
+};
