@@ -14,15 +14,16 @@ Capitulo.create = async (newCapitulo, result) => {
     result(null, capitulo);
 };
 
-Capitulo.getAllFromBook = async (bookID, result) => {
+//Bug [Error: Unknown column 'undefined' in 'where clause']
+Capitulo.getAllFromBook = async (bookId, result) => {
     const sql = await database.connect();
-    const [capitulos] = await sql.query(`SELECT * FROM Capitulo WHERE book_id = ${bookId}`);
+    const [capitulos] = await sql.query(`SELECT * FROM Capitulo WHERE livro_id = ${bookId}`);
     result(null, capitulos);
 };
 
 Capitulo.deleteByIdAndBook = async (id, bookId, result) => {
     const sql = await database.connect();
-    const capitulo = await sql.query(`DELETE FROM Capitulo WHERE id = ${id} AND book_id = ${bookId}`);
+    const capitulo = await sql.query(`DELETE FROM Capitulo WHERE id = ${id} AND livro_id = ${bookId}`);
     result(null, capitulo);
 };
 
