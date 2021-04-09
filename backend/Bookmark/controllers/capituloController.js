@@ -1,7 +1,8 @@
 const database = require('../db');
-const Estante = require('../models/estante')
+const Capitulo = require('../models/capitulo');
+const Estante = require('../models/capitulo')
 
-// Lista todas as estantes.
+// Lista todas os capitulos.
 exports.index = function(req, res) {
     Estante.getAll((err, data) => {
         if (err)
@@ -13,8 +14,10 @@ exports.index = function(req, res) {
     });
 };
 
-// Busca o capitulo atual da estante
-exports.buscarCapituloAtual = function(req, res) {
-
-    res.send('NOT IMPLEMENTED: buscar capitulo atual');
+// Busca todos os capitulos do livro
+exports.buscarCapitulosDoLivro = function(req, res) {
+    Capitulo.getAllFromBook(req.params.bookID, (err, data) => {
+        res.send(data);
+    });
 };
+

@@ -11,7 +11,7 @@ const Estante = function(estante) {
 
 Estante.create = async (newEstante, result) => {
     const sql = await database.connect();
-    const estante = sql.query("INSERT INTO Estante SET ?", newLivro)
+    const estante = sql.query("INSERT INTO Estante SET ?", newEstante)
     result(null, estante);
 };
 
@@ -46,3 +46,4 @@ Estante.deleteById = async (estanteId, result) => {
 };
 
 module.exports = Estante;
+
