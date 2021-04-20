@@ -30,12 +30,16 @@ exports.adicionarLivro = function(req, res) {
 
 // Editar um livro.
 exports.editarLivro = function(req, res) {
-    res.send('NOT IMPLEMENTED: editar livro');
+    Livro.editById(req.body.livro, req.params.id, (err, data) => {
+        res.send(data);
+    });
 };
 
 // Remover um livro.
 exports.removerLivro = function(req, res) {
-    res.send('NOT IMPLEMENTED: remover livro');
+    Livro.deleteById(req.params.id, (err, data) => {
+        res.send(data);
+    });
 };
 
 /**
