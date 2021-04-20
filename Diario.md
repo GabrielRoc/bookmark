@@ -1,5 +1,9 @@
 # Bookmark - Diário
 
+---
+> ## Sprint 1
+---
+
 ## Reunião 1
 
 ### Data: 04/03/2021
@@ -75,3 +79,82 @@ Foram escolhidas as seguintes histórias, consideradas básicas para o funcionam
 #### Alterações
 - **Gabriel Rocha:** Refez a base do projeto para melhor funcionalidade
 - **Marrielly Martines:** Refez o diário para melhor organização
+
+
+
+## Reunião 5
+
+### Data: 01/04/2021
+#### Status: Cancelada
+
+
+### Data: 05/03/2021
+
+#### Alterações
+- **Ana Frozza:** Criou CRUD dos livros e auxiliou outros participantes 
+- **Gabriel Rocha:** Criou CRUD da estante e auxiliou outros participantes
+- **Marrielly Martines:** Criou CRUD da leitura e continuou CRUD dos livros e da estante
+- **Wiliam Consentino:** Tentou finalizar o CRUD dos livros, porém obteve problemas com a interação com o banco de dados
+
+
+
+## Reunião 6
+
+### Data: 06/04/2021
+
+
+#### Resumo
+Foi discutido sobre o andamento do projeto:
+- debatemos as dificuldades obtidas com a linguagem e a curva de aprendizado necessária para melhor desempenho no desenvolvimento
+- debatemos sobre as estimativas das issues, algumas subestimadas
+- definimos as próximas tarefas a serem realizadas
+- iniciamos planejamento para desenvolvimento do front-end
+
+
+#### Participantes
+- **Ana Frozza:** Responsável por criar método para retornar o capitulo atual e capítulos finalizados
+- **Gabriel Rocha e Marrielly Martines:** Responsáveis por criar método para retornar páginas lidas do capítulo atual
+- **Wiliam Consentino:** Responsável por criar método que realiza histórico de leitura
+
+
+## Reunião 7 - Final
+
+### Data: 13/04/2021
+
+
+#### Resumo 
+Foi discutido as mudanças necessárias para a próxima sprint em relação a novos métodos para documentação, novas estratégias de implementação, e reorganização das tarefas devido a saída de um dos membros da equipe. Ficou decidido que o back-end terá pouco desenvolvimento no momento, até que o Sequelize seja implementado por completo. Além disso, as issues foram ressignificadas e o zenhub sofrerá alterações.
+
+
+#### Participantes
+- **Ana Frozza:** Responsável por criar novas issues e tarefas no zenhub
+- **Gabriel Rocha:** Responsável por implementar o sequelize ao projeto
+- **Marrielly Martines:** Responsável por por criar novas issues e tarefas no zenhub e realizar o diário
+
+
+---
+> ## Sprint 2
+---
+
+## Reunião 8 
+
+### Data: 16/04/2021
+
+
+#### Resumo 
+Separamos as tarefas de cada um da sprint, criando um label com o nome de cada integrante para atribuir melhor as tarefas. As tarefas agora estão separadas no zenhub também como issues, mas atreladas a uma issue maior, a qual ela pertence. Notamos que acabamos não utilizando o zenhub de forma adequada, por conta de uma má interpretação do que foi pedido por parte da equipe; logo definiremos melhor a sprint para conseguirmos gerar o gráfico de burndown. 
+
+
+#### Participantes
+- **Ana Frozza:** 
+     - ✅ Analisou as issues iniciais e separou as tarefas à elas relacionadas, criando novas issues para as mesmas
+     - ✍ Começará a implementar as issues #20 (relacionada a issue #6), #21 (relacionada a issue #7), #22 (relacionada a issue #7) e #13 (relacionada a issue #1)
+     - ❎ Cumpriu com tudo que se propôs a fazer
+- **Gabriel Rocha:**
+     - ✅ Iniciou a implementação do Sequelize no projeto
+     - ✍ Continuará a implementação do Sequelize, responsável pela issue #25
+     - ❎ Cumpriu com tudo que se propôs a fazer
+- **Marrielly Martines:**
+     - ✅ Realizou o diário
+     - ✍ Começará a implementar as issues #23 (relacionada a issue #9) e #24 (relacionada a issue #3)
+     - ❌ Não realizou a criação de tarefas no zenhub, pois estava com o computador na assistência técnica
