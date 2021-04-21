@@ -1,15 +1,9 @@
 const database = require('../db');
 const Livro = require('../models/livro')
 
-// Lista todos os livros.
 exports.index = function(req, res) {
-    Livro.getAll((err, data) => {
-        if (err)
-            res.status(500).send({
-            message:
-                err.message || "Some error occurred while retrieving customers."
-            });
-        else res.send(data);
+    Livro.get(req.headers, (err, data) => {
+         res.send(data);
     });
 };
 
@@ -41,15 +35,3 @@ exports.removerLivro = function(req, res) {
         res.send(data);
     });
 };
-
-/**
- * ADICIONA GENERO PARA TESTE
- */
-// (async () => {
-//     // const dados_livro = req.body.livro;
-//     const conn = await database.connect();
-//     const sql = 'INSERT INTO Genero(gen_nome) VALUES (?);';
-//     const values = ['Fantasia'];
-//     const genero = await conn.query(sql, values);
-//     res.send(genero);
-// })();
