@@ -158,3 +158,30 @@ Separamos as tarefas de cada um da sprint, criando um label com o nome de cada i
      - ✅ Realizou o diário
      - ✍ Começará a implementar as issues #23 (relacionada a issue #9) e #24 (relacionada a issue #3)
      - ❌ Não realizou a criação de tarefas no zenhub, pois estava com o computador na assistência técnica
+
+
+## Reunião 9
+
+### Data: 22/04/2021
+
+
+#### Resumo 
+Realizamos o planning poker da segunda Sprint, estimando os valores das novas issues quebradas. Reafirmamos os deveres de cada um na reunião, analisamos o gráfico de burndown e adicionamos mais issues.
+
+
+#### Participantes
+- **Ana Frozza:** 
+     - ✅ Criou a Sprint no zenhub e gerou o gráfico de burndown; Criou 2 novas issues à medida que foi necessário; Completou as issues #20, #21 e #22
+     - ✍ Continuará a implementar a issue #13 (relacionada a issue #1)
+     - ❎ Cumpriu com tudo que se propôs a fazer
+     - 🌟 Realizou mais tarefas do que havia prometido
+- **Gabriel Rocha:**
+     - ✅ Continuou a implementação do Sequelize no projeto
+     - ✍ Continuará a implementação do Sequelize, responsável pela issue #25
+     - ❎ Cumpriu com tudo que se propôs a fazer
+- **Marrielly Martines:**
+     - ✅ Realizou o diário e começou a implementação da issue #23 (relacionada a issue #9)
+     - ✍ Continuará a implementar a issue #23 e dará início a #24 (relacionada a issue #3)
+     - ❎ Cumpriu com o que se propôs a fazer
+     - 🔧 Teve que recomeçar o trabalho devido à formatação do pc
+
