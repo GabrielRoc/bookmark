@@ -52,3 +52,11 @@ exports.desfavoritarLivro = function(req, res) {
         res.send(data);
     });
 };
+
+// Avalia um livro
+exports.avaliarLivro = function(req, res) {
+    Estante.setAvaliacao(req.params.id, req.params.avaliacao, (err, data) => {
+        res.send(data);
+    });
+};
+

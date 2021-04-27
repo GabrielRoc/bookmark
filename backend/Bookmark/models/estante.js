@@ -59,6 +59,12 @@ Estante.removeFavorito = async (estanteId, result) => {
     result(null, estante);
 };
 
+Estante.setAvaliacao = async (estanteId, avaliacao, result) => {
+    const sql = await database.connect();
+    const estante = await sql.query(`UPDATE Estante SET est_avaliacao = ${avaliacao} WHERE id = ${estanteId}`);
+    result(null, estante);
+};
+
 
 module.exports = Estante;
 
