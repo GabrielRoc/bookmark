@@ -49,7 +49,13 @@ Estante.deleteById = async (estanteId, result) => {
 
 Estante.setFavorito = async (estanteId, result) => {
     const sql = await database.connect();
-    const estante = await sql.query(`UPDATE Estante SET est_fav = TRUE WHERE id = ${estanteId}`);
+    const estante = await sql.query(`UPDATE Estante SET est_fav = "TRUE" WHERE id = ${estanteId}`);
+    result(null, estante);
+};
+
+Estante.removeFavorito = async (estanteId, result) => {
+    const sql = await database.connect();
+    const estante = await sql.query(`UPDATE Estante SET est_fav = "FALSE" WHERE id = ${estanteId}`);
     result(null, estante);
 };
 

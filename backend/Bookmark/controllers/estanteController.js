@@ -39,9 +39,16 @@ exports.buscarCapituloAtual = function(req, res) {
     })
 };
 
-// Busca estante expecifica.
+// Marca um livro como favorito
 exports.favoritarLivro = function(req, res) {
     Estante.setFavorito(req.params.id, (err, data) => {
+        res.send(data);
+    });
+};
+
+// Remove um livro dos favoritos
+exports.desfavoritarLivro = function(req, res) {
+    Estante.removeFavorito(req.params.id, (err, data) => {
         res.send(data);
     });
 };
