@@ -38,3 +38,10 @@ exports.buscarCapituloAtual = function(req, res) {
         })
     })
 };
+
+// Busca estante expecifica.
+exports.favoritarLivro = function(req, res) {
+    Estante.setFavorito(req.params.id, (err, data) => {
+        res.send(data);
+    });
+};

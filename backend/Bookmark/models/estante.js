@@ -46,5 +46,12 @@ Estante.deleteById = async (estanteId, result) => {
     result(null, estante);
 };
 
+Estante.setFavorito = async (estanteId, result) => {
+    const sql = await database.connect();
+    const estante = await sql.query(`UPDATE Estante SET est_fav = TRUE WHERE id = ${estanteId}`);
+    result(null, estante);
+};
+
+
 module.exports = Estante;
 
