@@ -6,6 +6,7 @@ const Estante = function(estante) {
     this.usuario_id = estante.usuario_id;
     this.livro_id = estante.livro_id;
     this.est_flag = estante.est_flag;
+    this.est_fav = estante.est_fav;
     this.est_avaliacao = estante.est_avaliacao;
     this.est_pag_marcada = estante.est_pag_marcada;
 };
