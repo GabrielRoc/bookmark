@@ -172,7 +172,7 @@ Realizamos o planning poker da segunda Sprint, estimando os valores das novas is
 #### Participantes
 - **Ana Frozza:** 
      - ✅ Criou a Sprint no zenhub e gerou o gráfico de burndown; Criou 2 novas issues à medida que foi necessário; Completou as issues #20, #21 e #22
-     - ✍ Continuará a implementar a issue #13 (relacionada a issue #1)
+     - ✍ Continuará a implementar a issue #13 (relacionada a issue #1); Implementará as issues #26 e #27
      - ❎ Cumpriu com tudo que se propôs a fazer
      - 🌟 Realizou mais tarefas do que havia prometido
 - **Gabriel Rocha:**
@@ -184,4 +184,28 @@ Realizamos o planning poker da segunda Sprint, estimando os valores das novas is
      - ✍ Continuará a implementar a issue #23 e dará início a #24 (relacionada a issue #3)
      - ❎ Cumpriu com o que se propôs a fazer
      - 🔧 Teve que recomeçar o trabalho devido à formatação do pc
+
+
+## Reunião 10
+
+### Data: 29/04/2021
+
+
+#### Resumo 
+Discutimos o andamento do projeto e as mudanças que serão necessárias após a finalização do sequelize. Também foi debatido a prioridade do front-end, sendo decidido a interface da estante. 
+
+
+#### Participantes
+- **Ana Frozza:** 
+     - ✅ Completou a issues #26 e #27
+     - ✍ Continuará a implementar a issue #13 (relacionada a issue #1); Implementará as issues #17 e #19 (relacionadas a issue #10)
+     - ❎ Cumpriu com tudo que se propôs a fazer
+- **Gabriel Rocha:**
+     - ✅ Continuou a implementação do Sequelize no projeto
+     - ✍ Finalizará a implementação do Sequelize, responsável pela issue #25; Realizará as mudanças necessárias no código em seguida 
+     - ❎ Cumpriu com tudo que se propôs a fazer
+- **Marrielly Martines:**
+     - ✅ Realizou o diário; Completou as issues #23 e #24; Criou 2 novas issues, a medida que foi necessário: #29, já finalizada, e #30 (relacionada a issue #18)
+     - ✍ Dará início a issue #30 (relacionada a issue #18)
+     - ❎ Cumpriu com tudo que se propôs a fazer
 
