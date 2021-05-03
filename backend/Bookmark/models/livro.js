@@ -57,17 +57,11 @@ Livro.findById = async (livroId, result) => {
     result(null, livro);
 };
 
-Livro.findByTitulo = async (titulo, result) => {
-    const sql = await database.connect();
-    const livro = await sql.query(`SELECT * FROM Livro WHERE livro_titulo = ${titulo}`);
-    result(null, livro);
-};
-
 Livro.editById = async (editedLivro, livroId, result) => {
     const sql = await database.connect();
     const livro = sql.query(`UPDATE Livro SET ? WHERE id = ${livroId}`, editedLivro)
     console.log("Livro editado");
-    result(null, editedLivro);
+    result(null, livro);
 };
 
 Livro.deleteById = async (livroId, result) => {

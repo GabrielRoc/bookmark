@@ -21,4 +21,24 @@ Autor.getAll = async result => {
     result(null, autores);
 };
 
+Autor.findById = async (autorId, result) => {
+    const sql = await database.connect();
+    const autor = await sql.query(`SELECT * FROM Autor WHERE id = ${autorId}`);
+    result(null, autor);
+};
+
+Autor.editById = async (editedAutor, autorId, result) => {
+    const sql = await database.connect();
+    const autor = sql.query(`UPDATE Autor SET ? WHERE id = ${autorId}`, editedAutor)
+    console.log("Autor editado");
+    result(null, autor);
+};
+
+Autor.deleteById = async (autorId, result) => {
+    const sql = await database.connect();
+    const autor = await sql.query(`DELETE from Autor WHERE id = ${autorId}`);
+    result(null, autor);
+};
+
+
 module.exports = Autor;
