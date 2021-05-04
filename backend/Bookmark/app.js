@@ -8,6 +8,7 @@ var usersRouter = require('./routes/users');
 var livrosRouter = require('./routes/livros');
 var generosRouter = require('./routes/generos');
 var autoresRouter = require('./routes/autores');
+var estantesRouter = require('./routes/estantes');
 
 var app = express();
 
@@ -22,5 +23,6 @@ app.use('/users', usersRouter);
 app.use('/livros', livrosRouter);
 app.use('/generos', generosRouter);
 app.use('/autores', autoresRouter);
+app.use('/estantes', estantesRouter);
 
 module.exports = app;

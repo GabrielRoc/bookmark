@@ -23,7 +23,14 @@ exports.adicionarLeitura = function(req, res) {
 
 // Consulta todas as leituras de uma estante
 exports.consultarLeituras = function(req, res) {
-    Leitura.getByEstante(req.params.estante, (err, data) => {
+    Leitura.getByEstante(req.params.estante_id, (err, data) => {
+        res.send(data);
+    });
+};
+
+// Consulta a ultima leitura de uma estante
+exports.consultarUltimaLeitura = function(req, res) {
+    Leitura.getLastByEstante(req.params.estante_id, (err, data) => {
         res.send(data);
     });
 };

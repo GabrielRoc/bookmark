@@ -2,17 +2,18 @@ const database = require('../db');
 
 // constructor
 const Estante = function(estante) {
+    this.id = estante.id;
     this.usuario_id = estante.usuario_id;
     this.livro_id = estante.livro_id;
     this.est_flag = estante.est_flag;
+    this.est_fav = estante.est_fav;
     this.est_avaliacao = estante.est_avaliacao;
     this.est_pag_marcada = estante.est_pag_marcada;
 };
 
-Estante.create = async (newLivro, result) => {
+Estante.create = async (newEstante, result) => {
     const sql = await database.connect();
-    const estante = sql.query("INSERT INTO Estante SET ?", newLivro)
-    console.log("Livro criado");
+    const estante = sql.query("INSERT INTO Estante SET ?", newEstante)
     result(null, estante);
 };
 
@@ -46,4 +47,24 @@ Estante.deleteById = async (estanteId, result) => {
     result(null, estante);
 };
 
+Estante.setFavorito = async (estanteId, result) => {
+    const sql = await database.connect();
+    const estante = await sql.query(`UPDATE Estante SET est_fav = "TRUE" WHERE id = ${estanteId}`);
+    result(null, estante);
+};
+
+Estante.removeFavorito = async (estanteId, result) => {
+    const sql = await database.connect();
+    const estante = await sql.query(`UPDATE Estante SET est_fav = "FALSE" WHERE id = ${estanteId}`);
+    result(null, estante);
+};
+
+Estante.setAvaliacao = async (estanteId, avaliacao, result) => {
+    const sql = await database.connect();
+    const estante = await sql.query(`UPDATE Estante SET est_avaliacao = ${avaliacao} WHERE id = ${estanteId}`);
+    result(null, estante);
+};
+
+
 module.exports = Estante;
+
