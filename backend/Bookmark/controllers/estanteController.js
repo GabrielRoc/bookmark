@@ -1,9 +1,15 @@
 const database = require('../db');
-const Livro = require('../models/livro')
+const Estante = require('../models/estante')
 
+// Lista todas as estantes.
 exports.index = function(req, res) {
-    Livro.get(req.headers, (err, data) => {
-         res.send(data);
+    Estante.getAll((err, data) => {
+        if (err)
+            res.status(500).send({
+            message:
+                err.message || "Some error occurred while retrieving customers."
+            });
+        else res.send(data);
     });
 };
 
@@ -24,14 +30,10 @@ exports.adicionarLivro = function(req, res) {
 
 // Editar um livro.
 exports.editarLivro = function(req, res) {
-    Livro.editById(req.body.livro, req.params.id, (err, data) => {
-        res.send(data);
-    });
+    res.send('NOT IMPLEMENTED: editar livro');
 };
 
 // Remover um livro.
 exports.removerLivro = function(req, res) {
-    Livro.deleteById(req.params.id, (err, data) => {
-        res.send(data);
-    });
+    res.send('NOT IMPLEMENTED: remover livro');
 };
