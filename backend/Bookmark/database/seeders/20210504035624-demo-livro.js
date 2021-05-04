@@ -12,8 +12,8 @@ module.exports = {
         livro_num_pag: '300',
         livro_editora: 'Universo',
         livro_sinopse: 'Todo o planeta terra sendo testado',
-        createdAt: new Date(),
-        updatedAt: new Date()
+        createdAt: '2021-05-04T14:32:42.000Z',
+        updatedAt: '2021-05-04T14:32:42.000Z'
       },
       {
         autor_id: '1',
@@ -24,8 +24,8 @@ module.exports = {
         livro_num_pag: '270',
         livro_editora: 'Seguinte',
         livro_sinopse: 'Trinta e cinco garotas e uma coroa',
-        createdAt: new Date(),
-        updatedAt: new Date()
+        createdAt: '2021-05-04T14:32:42.000Z',
+        updatedAt: '2021-05-04T14:32:42.000Z'
       }
     ]);
   },

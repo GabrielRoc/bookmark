@@ -20,8 +20,8 @@ describe('Get Endpoints', () => {
             "livro_sinopse": "Todo o planeta terra sendo testado",
             "livro_avaliacao": null,
             "livro_previa": null,
-            "createdAt": "2021-05-04T07:07:30.000Z",
-            "updatedAt": "2021-05-04T07:07:30.000Z"
+            "createdAt": "2021-05-04T14:32:42.000Z",
+            "updatedAt": "2021-05-04T14:32:42.000Z"
         },
         {
             "id": 2,
@@ -36,8 +36,8 @@ describe('Get Endpoints', () => {
             "livro_sinopse": "Trinta e cinco garotas e uma coroa",
             "livro_avaliacao": null,
             "livro_previa": null,
-            "createdAt": "2021-05-04T07:07:30.000Z",
-            "updatedAt": "2021-05-04T07:07:30.000Z"
+            "createdAt": "2021-05-04T14:32:42.000Z",
+            "updatedAt": "2021-05-04T14:32:42.000Z"
         }
     ]);
   }),
@@ -59,8 +59,8 @@ describe('Get Endpoints', () => {
             "livro_sinopse": "Todo o planeta terra sendo testado",
             "livro_avaliacao": null,
             "livro_previa": null,
-            "createdAt": "2021-05-04T07:07:30.000Z",
-            "updatedAt": "2021-05-04T07:07:30.000Z"
+            "createdAt": "2021-05-04T14:32:42.000Z",
+            "updatedAt": "2021-05-04T14:32:42.000Z"
         }
     ]);
   })
