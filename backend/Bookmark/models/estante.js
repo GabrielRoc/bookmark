@@ -1,7 +1,7 @@
 const database = require('../db');
 
 // constructor
-const Estante = function(estante) {
+const Estante = function (estante) {
     this.id = estante.id;
     this.usuario_id = estante.usuario_id;
     this.livro_id = estante.livro_id;
@@ -63,6 +63,20 @@ Estante.setAvaliacao = async (estanteId, avaliacao, result) => {
     const sql = await database.connect();
     const estante = await sql.query(`UPDATE Estante SET est_avaliacao = ${avaliacao} WHERE id = ${estanteId}`);
     result(null, estante);
+};
+
+Estante.calcProgresso = async (estanteId, result) => {
+    const sql = await database.connect();
+    const leitura = await sql.query(`SELECT * FROM Leitura  WHERE estante_id = ${estanteId} ORDER BY leitura_data DESC`);
+    const livro = await sql.query(`SELECT * FROM Livro where id IN (SELECT livro_id FROM Estante WHERE Estante.id = ${estanteId})`);
+
+    var pags_lidas = leitura[0][0].leitura_pag;
+    var pags_livro = livro[0][0].livro_num_pag;
+
+    var progresso = (pags_lidas * 100) / pags_livro;
+
+
+    result(null, [{ progresso }]);
 };
 
 

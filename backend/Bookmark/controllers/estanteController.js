@@ -60,3 +60,10 @@ exports.avaliarLivro = function(req, res) {
     });
 };
 
+
+// Progresso de leitura de um livro
+exports.calcProgressoLeitura = function(req, res) {
+    Estante.calcProgresso(req.params.id, (err, data) => {
+        res.send(data);
+    });
+};
