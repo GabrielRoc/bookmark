@@ -1,112 +1,76 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import React, {useState} from "react";
+import { Image } from "react-native";
+import AppLoading from "expo-app-loading";
+import { useFonts } from '@use-expo/font';
+import { Asset } from "expo-asset";
+import { Block, GalioProvider } from "galio-framework";
+import { NavigationContainer } from "@react-navigation/native";
 
-import React from 'react';
-import type {Node} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import { enableScreens } from "react-native-screens";
+enableScreens();
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import Screens from "./navigation/Screens";
+import { Images, articles, argonTheme } from "./constants";
 
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+const assetImages = [
+  Images.Onboarding,
+  Images.LogoOnboarding,
+  Images.Logo,
+  Images.Pro,
+  Images.ArgonLogo,
+  Images.iOSLogo,
+  Images.androidLogo
+];
 
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+articles.map(article => assetImages.push(article.image));
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+function cacheImages(images) {
+  return images.map(image => {
+    if (typeof image === "string") {
+      return Image.prefetch(image);
+    } else {
+      return Asset.fromModule(image).downloadAsync();
+    }
+  });
+}
+
+export default props => {
+  const [isLoadingComplete, setLoading] = useState(false);
+  let [fontsLoaded] = useFonts({
+    'ArgonExtra': require('./assets/font/argon.ttf'),
+  });
+
+  function _loadResourcesAsync() {
+    return Promise.all([...cacheImages(assetImages)]);
+  }
+
+  function _handleLoadingError(error) {
+    console.warn(error);
   };
 
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-};
+ function _handleFinishLoading() {
+    setLoading(true);
+  };
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
-
-export default App;
+  if(!fontsLoaded && !isLoadingComplete) {
+    return (
+      <AppLoading
+        startAsync={_loadResourcesAsync}
+        onError={_handleLoadingError}
+        onFinish={_handleFinishLoading}
+      />
+    );
+  } else if(fontsLoaded) {
+    return (
+      <NavigationContainer>
+        <GalioProvider theme={argonTheme}>
+          <Block flex>
+            <Screens />
+          </Block>
+        </GalioProvider>
+      </NavigationContainer>
+    );
+  } else {
+    return null
+  }
+}
