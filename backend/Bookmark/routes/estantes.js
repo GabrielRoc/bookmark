@@ -12,6 +12,7 @@ router.get('/capitulo/:id', estante_controller.buscarCapituloAtual) // Busca o c
 
 
 router.get('/progresso/:id', estante_controller.calcProgressoLeitura) // Calcula o progresso de leitura do livro
+router.get('/estimar_leitura', estante_controller.estimaLeituraPorData) // Estima quantidades de paginas lidas por data
 
 module.exports = router;
 

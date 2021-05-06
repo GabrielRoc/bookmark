@@ -67,3 +67,11 @@ exports.calcProgressoLeitura = function(req, res) {
         res.send(data);
     });
 };
+
+
+// Estima quantidades de paginas lidas por data
+exports.estimaLeituraPorData = function(req, res) {
+    Estante.estimaLeitura(req.headers, (err, data) => {
+        res.send(data);
+    });
+};

@@ -79,6 +79,30 @@ Estante.calcProgresso = async (estanteId, result) => {
     result(null, [{ progresso }]);
 };
 
+Estante.estimaLeitura = async (filtro, result) => {
+
+    var query_filtro = `leitura_data BETWEEN '${filtro.data_inicio}' AND '${filtro.data_fim}'`;
+    var pags_lidas = 0;
+    var livro_sendo_lido = 0;
+    var ultima_pg_lida = 0;
+    const sql = await database.connect();
+    const leitura = await sql.query(`SELECT * FROM Leitura WHERE ${query_filtro}`);
+
+    leitura[0].forEach(livro => {
+        if (livro.estante_id === livro_sendo_lido) {
+            pags_lidas += (livro.leitura_pag - ultima_pg_lida);
+            ultima_pg_lida = livro.leitura_pag;
+        } else {
+            ultima_pg_lida = 0;
+            pags_lidas += livro.leitura_pag;
+            ultima_pg_lida = livro.leitura_pag;
+        }
+        livro_sendo_lido = livro.estante_id
+
+    });
+
+    result(null, [{ pags_lidas }]);
+}
 
 module.exports = Estante;
 
