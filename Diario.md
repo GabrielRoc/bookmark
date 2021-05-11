@@ -209,3 +209,30 @@ Discutimos o andamento do projeto e as mudanças que serão necessárias após a
      - ✍ Dará início a issue #30 (relacionada a issue #18)
      - ❎ Cumpriu com tudo que se propôs a fazer
 
+
+## Reunião 11 - FINAL 
+
+### Data: 04/04/2021
+
+
+#### Resumo 
+Discutimos a Sprint e percebemos que mudanças deveriam ser feitas para que ela não falhasse. Não obtivemos sucesso com front-end em React Native, então trocaremos para Flutter. A issue #13 não estava de acordo com o projeto, será discutida se realmente não é necessária ou se apenas deve haver mudanças. 
+
+
+#### Participantes
+- **Ana Frozza:** 
+     - ✅ Iniciou as issues #17 e #19
+     - ✍ Continuará a implementar as issues #17 e #19 (relacionadas a issue #10)
+     - 🟨 Cumpriu em partes com o que se propôs a fazer
+     - 🔧 Encontrou divergências quanto à issue #13, movida ao icebox
+- **Gabriel Rocha:**
+     - ✅ Finalizou a implementação do Sequelize no projeto e modificou o código para ficar de acordo com o mesmo
+     - ✍ Realizará a transição do front-end para o Flutter
+     - ❎ Cumpriu com tudo que se propôs a fazer
+- **Marrielly Martines:**
+     - ✅ Começou a implementar a issue #30, porém obteve problemas com a linguagem.
+     - ✍ Realizará a transição do front-end para o Flutter
+     - 🟨 Cumpriu em partes com o que se propôs a fazer 
+     - 🔧 Encontrou muitas dificuldades com o React Native
+
+
