@@ -260,6 +260,12 @@ Discutimos a Sprint e percebemos que mudanças deveriam ser feitas para que ela 
 ---
 
 
+###### Linguagem definida
+Javascript e Dart
+###### Frameworks
+Node.js e Flutter
+
+
 ## Reunião 12
 
 ### Data: 14/04/2021
