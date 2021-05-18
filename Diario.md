@@ -236,3 +236,46 @@ Discutimos a Sprint e percebemos que mudanças deveriam ser feitas para que ela 
      - 🔧 Encontrou muitas dificuldades com o React Native
 
 
+### Data: 11/03/2021
+
+#### Alterações
+
+#### Participantes
+- **Ana Frozza:** 
+     - ✅ Finalizou as issues #17 e #19
+     - ❎ Cumpriu com tudo que se propôs a fazer 
+- **Gabriel Rocha:**
+     - ✅ Realizou a transição do front-end para o Flutter
+     - 🟨 Cumpriu em partes com o que se propôs a fazer 
+     - 🔧 O front-end não estava rodando por incompatibilidades da versão do Flutter
+- **Marrielly Martines:**
+     - ✅ Realizou a transição do front-end para o Flutter
+     - 🟨 Cumpriu em partes com o que se propôs a fazer 
+     - 🔧 O front-end não estava rodando por incompatibilidades da versão do Flutter
+
+
+
+---
+> ## Sprint 3
+---
+
+
+## Reunião 12
+
+### Data: 14/04/2021
+
+
+#### Resumo 
+Discutido sobre o que será feito na nova sprint e as tarefas que deverão realizadas. Criadas novas issues e realizado o planning poker para cada uma delas, sendo depois atribuídas aos integrantes. 
+
+
+#### Participantes
+- **Ana Frozza:** 
+     - ✍ Implementará as issues #31 e #34 (relacionadas as issues #6 e #7)
+- **Gabriel Rocha:**
+     - ✍ Estruturará o front-end (issue #32) e implementará a issue #33 (relacionadas as issues #1, #3 e #9)
+- **Marrielly Martines:**
+     - ✍ Implementará a issue #30 (relacionadas a issue #10)
+
+
+
