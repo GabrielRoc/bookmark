@@ -291,7 +291,7 @@ Discutido sobre o que será feito na nova sprint e as tarefas que deverão reali
 
 
 #### Resumo 
-Discutido sobre o andamento do projeto e tirado dúvidas quanto ao flutter.
+Discutido sobre o andamento do projeto e tirado dúvidas quanto ao flutter. Atribuída a issue #34, antes da Ana, ao Gabriel.
 
 
 #### Participantes
