@@ -5,8 +5,8 @@ module.exports = {
     return queryInterface.bulkInsert('Generos', [
       {
         gen_nome: 'Testes',
-        createdAt: '2021-05-04T14:32:42.000Z',
-        updatedAt: '2021-05-04T14:32:42.000Z'
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
     ]);
   },
