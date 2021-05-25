@@ -9,6 +9,12 @@ exports.index = async function (req, res) {
     res.send(result);
 };
 
+// Adiciona livro na estante
+exports.adicionarLivroEstante = async function (req, res) {
+    const result = await Estante.create(req.body.estante);
+    res.send(result);
+};
+
 // Busca estante expecifica.
 exports.buscarEstante = async function (req, res) {
     const result = await Estante.findAll({
