@@ -236,7 +236,7 @@ Discutimos a Sprint e percebemos que mudanças deveriam ser feitas para que ela 
      - 🔧 Encontrou muitas dificuldades com o React Native
 
 
-### Data: 11/03/2021
+### Data: 11/05/2021
 
 #### Alterações
 
@@ -268,7 +268,7 @@ Node.js e Flutter
 
 ## Reunião 12
 
-### Data: 14/04/2021
+### Data: 14/05/2021
 
 
 #### Resumo 
@@ -282,6 +282,31 @@ Discutido sobre o que será feito na nova sprint e as tarefas que deverão reali
      - ✍ Estruturará o front-end (issue #32) e implementará a issue #33 (relacionadas as issues #1, #3 e #9)
 - **Marrielly Martines:**
      - ✍ Implementará a issue #30 (relacionadas a issue #10)
+
+
+
+## Reunião 12
+
+### Data: 21/05/2021
+
+
+#### Resumo 
+Discutido sobre o andamento do projeto e tirado dúvidas quanto ao flutter.
+
+
+#### Participantes
+- **Ana Frozza:** 
+     - ✅ Começou a implementar a issue #31
+     - ✍ Continuará a implementar a issue #31 
+     - ❎ Cumpriu com tudo que se propôs a fazer 
+- **Gabriel Rocha:**
+     - ✅ Estruturou o front-end (issue #32)
+     - ✍ Implementará a issue #33 e a issue #34
+     - ❎ Cumpriu com tudo que se propôs a fazer 
+- **Marrielly Martines:**
+     - ✅ Começou a implementar a issue #30
+     - ✍ Continuará a implementar a issue #30
+     - ❎ Cumpriu com tudo que se propôs a fazer 
 
 
 
