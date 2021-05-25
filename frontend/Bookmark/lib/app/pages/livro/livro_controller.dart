@@ -14,14 +14,17 @@ abstract class _LivroControllerBase with Store {
   late Future<Livro> livro;
 
   /*final Livro livro = new Livro(
-      livro_titulo: 'Teste',
-      livro_subtitulo: '01',
-      livro_volume: 'I',
-      livro_sinopse:
+      livroTitulo: 'Teste',
+      livroSubtitulo: '01',
+      livroVolume: 'I',
+      livroSinopse:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae eleifend justo. Vestibulum enim est, maximus a placerat quis, efficitur non purus. Sed hendrerit sem ac tellus ultrices, ut fringilla nulla sodales. Curabitur consectetur risus eu ligula vestibulum, vel ullamcorper sapien ultricies. Morbi ac est eget arcu tristique egestas vel vel diam. Nulla in condimentum massa. Nulla rhoncus aliquam lacus a fermentum. Etiam consectetur ipsum ac lectus pharetra molestie. Etiam at justo nunc. Vestibulum eu risus a enim ultrices malesuada et nec neque. Integer a felis rhoncus, blandit nisi eu, posuere sem. Phasellus fringilla libero lacus. Quisque lacinia elit at dui porttitor dictum.',
-      livro_editora: 'Aquela',
-      livro_avaliacao: 4,
-      livro_num_pag: 300);*/
+      livroEditora: 'Aquela',
+      livroAvaliacao: 4,
+      livroNumPag: 300,
+      autorId: 1,
+      id: 1,
+      generoId: 1);*/
 
   _LivroControllerBase(this.livroRepository) {
     //livros = livroRepository.getAllLivros.asObservable();

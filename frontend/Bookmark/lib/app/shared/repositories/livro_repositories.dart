@@ -18,7 +18,7 @@ class LivroRepository {
   Future<Livro> getLivroById(int id) async {
     try {
       Response response = await dio.get("/livros/buscar/${id}");
-      return (response.data).map((x) => Livro.fromJson(x));
+      return Livro.fromJson((response.data)[0]);
     } catch (error, stacktrace) {
       throw Exception("Exception occured: $error stackTrace: $stacktrace");
     }

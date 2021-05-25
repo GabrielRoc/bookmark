@@ -55,9 +55,9 @@ class _LivroPageState extends State<LivroPage> {
                             animation: true,
                             lineHeight: 20.0,
                             animationDuration: 2000,
-                            percent: 0.9,
+                            percent: 0.1,
                             center: Text(
-                              'Página 30 de 40',
+                              'Página 30 de ${snapshot.data!.livroNumPag}',
                               style: TextStyle(fontWeight: FontWeight.w700),
                             ),
                             linearStrokeCap: LinearStrokeCap.roundAll,
@@ -126,7 +126,8 @@ class _LivroPageState extends State<LivroPage> {
                       ),
                       Container(
                         margin: const EdgeInsets.fromLTRB(30, 10, 30, 0),
-                        child: Text('Avaliação Geral: 4.5'),
+                        child: Text(
+                            'Avaliação Geral: ${snapshot.data!.livroAvaliacao}'),
                       )
                     ],
                   ),
