@@ -1,5 +1,3 @@
-import 'dart:html';
-
 class LivroModel {
   int? autor_id;
   int? genero_id;
@@ -7,11 +5,11 @@ class LivroModel {
   String? livro_subtitulo;
   String? livro_volume;
   int? livro_num_pag;
-  Blob? livro_capa;
+  String? livro_capa;
   String? livro_editora;
   String? livro_sinopse;
   int? livro_avaliacao;
-  Blob? livro_previa;
+  String? livro_previa;
 
   LivroModel(
       {this.livro_titulo,
