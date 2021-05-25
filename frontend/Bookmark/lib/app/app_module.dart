@@ -16,7 +16,7 @@ class AppModule extends Module {
   final List<Bind> binds = [
     Bind((i) => AppController()),
     Bind((i) => HomeController()),
-    Bind((i) => EstanteController()),
+    Bind((i) => EstanteController(i.get())),
     Bind((i) => LivroController(i.get())),
     Bind((i) => LivroRepository(i.get())),
     Bind((i) => Dio(BaseOptions(baseUrl: URL_BASE))),

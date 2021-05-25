@@ -1,3 +1,4 @@
+import 'package:bookmark/app/shared/models/livro_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -31,99 +32,108 @@ class _LivroPageState extends State<LivroPage> {
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Stack(
-              alignment: Alignment.center,
-              children: [
-                Image.asset('res/res.jpg'),
-                Positioned(
-                  bottom: 0,
-                  child: Container(
-                    margin: EdgeInsets.all(20),
-                    child: new LinearPercentIndicator(
-                      width: MediaQuery.of(context).size.width - 50,
-                      animation: true,
-                      lineHeight: 20.0,
-                      animationDuration: 2000,
-                      percent: 0.9,
-                      center: Text(
-                        'Página 30 de 40',
-                        style: TextStyle(fontWeight: FontWeight.w700),
-                      ),
-                      linearStrokeCap: LinearStrokeCap.roundAll,
-                      progressColor: Colors.brown[200],
-                      backgroundColor: Colors.brown[100],
-                    ),
-                  ),
-                ),
-                /* Positioned(
-                  top: 15,
-                  right: 10,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: Icon(Icons.favorite),
-                    style: ElevatedButton.styleFrom(
-                      shape: CircleBorder(),
-                      padding: EdgeInsets.all(10),
-                      primary: Colors.brown[300],
-                    ),
-                  ),
-                )*/
-              ],
-            ),
-            Container(
-              margin: const EdgeInsets.fromLTRB(30, 30, 30, 20),
+      body: FutureBuilder<Livro>(
+          future: livroController.livro,
+          builder: (context, snapshot) {
+            if (!snapshot.hasData)
+              return Center(
+                child: CircularProgressIndicator(),
+              );
+            return SingleChildScrollView(
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Text('Aventura',
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.w300)),
-                  Text(
-                    livroController.livro.livro_titulo as String,
-                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Image.asset('res/res.jpg'),
+                      Positioned(
+                        bottom: 0,
+                        child: Container(
+                          margin: EdgeInsets.all(20),
+                          child: new LinearPercentIndicator(
+                            width: MediaQuery.of(context).size.width - 50,
+                            animation: true,
+                            lineHeight: 20.0,
+                            animationDuration: 2000,
+                            percent: 0.9,
+                            center: Text(
+                              'Página 30 de 40',
+                              style: TextStyle(fontWeight: FontWeight.w700),
+                            ),
+                            linearStrokeCap: LinearStrokeCap.roundAll,
+                            progressColor: Colors.brown[200],
+                            backgroundColor: Colors.brown[100],
+                          ),
+                        ),
+                      ),
+                      /* Positioned(
+                      top: 15,
+                      right: 10,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Icon(Icons.favorite),
+                        style: ElevatedButton.styleFrom(
+                          shape: CircleBorder(),
+                          padding: EdgeInsets.all(10),
+                          primary: Colors.brown[300],
+                        ),
+                      ),
+                    )*/
+                    ],
                   ),
-                  Text('por Joãozinho da Silva',
-                      style:
-                          TextStyle(fontSize: 12, fontWeight: FontWeight.w300))
+                  Container(
+                    margin: const EdgeInsets.fromLTRB(30, 30, 30, 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Text('Aventura',
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.w300)),
+                        Text(
+                          snapshot.data?.livroTitulo,
+                          style: TextStyle(
+                              fontSize: 30, fontWeight: FontWeight.w500),
+                        ),
+                        Text('por Joãozinho da Silva',
+                            style: TextStyle(
+                                fontSize: 12, fontWeight: FontWeight.w300))
+                      ],
+                    ),
+                  ),
+                  Container(
+                      margin: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                      child: Text(snapshot.data!.livroSinopse)),
+                  Column(
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(30, 20, 30, 0),
+                        child: RatingBar.builder(
+                          initialRating: 5,
+                          minRating: 0,
+                          direction: Axis.horizontal,
+                          allowHalfRating: false,
+                          itemCount: 5,
+                          unratedColor: Colors.brown[100],
+                          itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+                          itemBuilder: (context, _) => Icon(
+                            Icons.star,
+                            color: Colors.brown[300],
+                          ),
+                          onRatingUpdate: (rating) {
+                            print(rating);
+                          },
+                        ),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(30, 10, 30, 0),
+                        child: Text('Avaliação Geral: 4.5'),
+                      )
+                    ],
+                  ),
                 ],
               ),
-            ),
-            Container(
-                margin: const EdgeInsets.fromLTRB(30, 0, 30, 0),
-                child: Text(livroController.livro.livro_sinopse as String)),
-            Column(
-              children: [
-                Container(
-                  margin: const EdgeInsets.fromLTRB(30, 20, 30, 0),
-                  child: RatingBar.builder(
-                    initialRating: 5,
-                    minRating: 0,
-                    direction: Axis.horizontal,
-                    allowHalfRating: false,
-                    itemCount: 5,
-                    unratedColor: Colors.brown[100],
-                    itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-                    itemBuilder: (context, _) => Icon(
-                      Icons.star,
-                      color: Colors.brown[300],
-                    ),
-                    onRatingUpdate: (rating) {
-                      print(rating);
-                    },
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.fromLTRB(30, 10, 30, 0),
-                  child: Text('Avaliação Geral: 4.5'),
-                )
-              ],
-            ),
-          ],
-        ),
-      ),
+            );
+          }),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Alert(

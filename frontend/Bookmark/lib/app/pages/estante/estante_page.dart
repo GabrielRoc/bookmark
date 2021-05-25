@@ -16,6 +16,8 @@ class _EstantePageState extends State<EstantePage> {
   Widget build(BuildContext context) {
     var columnCount = 2;
 
+    //print('${estanteController.livros.value.toString()}');
+
     return AutoRefresh(
       duration: const Duration(milliseconds: 2000),
       child: Scaffold(
@@ -24,25 +26,18 @@ class _EstantePageState extends State<EstantePage> {
           searchBar: true,
           searchController: null,
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              SafeArea(
-                child: GridView.count(
-                  childAspectRatio: 1.0,
-                  padding: const EdgeInsets.all(8.0),
-                  crossAxisCount: columnCount,
-                  scrollDirection: Axis.vertical,
-                  shrinkWrap: true,
-                  children: List.generate(
-                    6,
-                    (int index) {
-                      return LivroCard();
-                    },
-                  ),
-                ),
-              ),
-            ],
+        body: GridView.count(
+          primary: false,
+          childAspectRatio: 7 / 10,
+          padding: const EdgeInsets.all(8.0),
+          crossAxisCount: columnCount,
+          scrollDirection: Axis.vertical,
+          shrinkWrap: true,
+          children: List.generate(
+            10,
+            (int index) {
+              return LivroCard();
+            },
           ),
         ),
       ),
@@ -59,22 +54,18 @@ class LivroCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => Modular.to.pushNamed('/livro'),
-      child: Container(
-        child: Image.asset('res/capa.jpg'),
-        width: Image.asset('res/capa.jpg').width,
-        height: Image.asset('res/capa.jpg').height,
-        margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 8.0),
-        decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.all(Radius.circular(4.0)),
-          boxShadow: <BoxShadow>[
-            BoxShadow(
-              color: Colors.black12,
-              blurRadius: 4.0,
-              offset: Offset(0.0, 4.0),
-            ),
-          ],
+      child: Card(
+        semanticContainer: true,
+        clipBehavior: Clip.antiAliasWithSaveLayer,
+        child: Image.asset(
+          'res/capa.jpg',
+          fit: BoxFit.cover,
         ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+        elevation: 5,
+        margin: EdgeInsets.all(10),
       ),
     );
   }

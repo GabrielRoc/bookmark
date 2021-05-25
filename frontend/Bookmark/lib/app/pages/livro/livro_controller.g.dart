@@ -12,13 +12,13 @@ mixin _$LivroController on _LivroControllerBase, Store {
   final _$livrosAtom = Atom(name: '_LivroControllerBase.livros');
 
   @override
-  ObservableFuture<List<LivroModel>?> get livros {
+  ObservableFuture<List<Livro>> get livros {
     _$livrosAtom.reportRead();
     return super.livros;
   }
 
   @override
-  set livros(ObservableFuture<List<LivroModel>?> value) {
+  set livros(ObservableFuture<List<Livro>> value) {
     _$livrosAtom.reportWrite(value, super.livros, () {
       super.livros = value;
     });

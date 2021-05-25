@@ -6,13 +6,21 @@ class LivroRepository {
 
   LivroRepository(this.dio);
 
-  Future<List<LivroModel>?> get getAllLivros async {
-    var result = await dio.get('/livros/');
-    List<LivroModel>? list;
-    for (var json in (result.data['results']) as List) {
-      LivroModel model = LivroModel(livro_titulo: json['livro_titulo']);
-      list!.add(model);
+  Future<List<Livro>> getAllLivros() async {
+    try {
+      Response response = await dio.get("/livros");
+      return (response.data as List).map((x) => Livro.fromJson(x)).toList();
+    } catch (error, stacktrace) {
+      throw Exception("Exception occured: $error stackTrace: $stacktrace");
     }
-    return list;
+  }
+
+  Future<Livro> getLivroById(int id) async {
+    try {
+      Response response = await dio.get("/livros/buscar/${id}");
+      return (response.data).map((x) => Livro.fromJson(x));
+    } catch (error, stacktrace) {
+      throw Exception("Exception occured: $error stackTrace: $stacktrace");
+    }
   }
 }
